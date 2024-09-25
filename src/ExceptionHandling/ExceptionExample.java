@@ -135,7 +135,7 @@ public class ExceptionExample {
 	 */
 	public void illegalArgumentExceptionExample() {
 		//uncomment below staement and see the exception
-		//int val = Integer.parseInt("abc);
+		//int val = Integer.parseInt("abc");
 	}
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
