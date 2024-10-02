@@ -4,6 +4,6 @@ This repository is a comprehensive guide for understanding core Java concepts. I
 
 ## Core Features:
 
-* Detailed examples of fundamental Java concepts such as object-oriented programming, data types, loops, exception handling, and more.
+* Detailed examples of fundamental Java concepts such as object-oriented programming, data types, loops, exception handling, and many more.
 * In-depth coverage of advanced topics including multithreading, collections framework, and lambda expressions.
 * Interview preparation section with common coding problems and solutions.
