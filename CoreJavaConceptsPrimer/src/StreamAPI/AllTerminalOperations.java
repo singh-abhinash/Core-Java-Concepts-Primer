@@ -155,17 +155,12 @@ Incorrect Code:
 		System.out.println(intResult);
 		
 output for above is not correct:
-[Ljava.lang.Object;@eed1f14
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-[Ljava.lang.Integer;@776ec8df
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+[Ljava.lang.Object;@eed1f14], [Ljava.lang.Integer;@776ec8df]
 
 The output you're seeing:
-[Ljava.lang.Object;@eed1f14
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-[Ljava.lang.Integer;@776ec8df
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-indicates that the toArray() method is returning arrays, but when you print them directly, you’re getting the 
+[Ljava.lang.Object;@eed1f14], [Ljava.lang.Integer;@776ec8df]
+
+indicates that the toArray() method is returning arrays, but when you print them directly, youï¿½re getting the 
 default toString() behavior for arrays in Java, which prints the array's type and its memory address, 
 rather than the elements of the array.
 
@@ -177,7 +172,7 @@ seeing @eed1f14 and similar values.
 Solution:
 To print the actual contents of the array, you need to use Arrays.toString().
 
-Here’s the corrected code:
+Hereï¿½s the corrected code:
 
 import java.util.Arrays;
 
@@ -238,8 +233,7 @@ How to Fix It:
 1. Using Optional (Safe)
 If you're okay with handling the case where the stream could be empty, use Optional:
 
-java
-Copy code
+java code ->
 Optional<Integer> reduceValue = num.stream()
     .reduce((num1, num2) -> num1 + num2);
 

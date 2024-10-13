@@ -136,7 +136,7 @@ public class ArrayListImplementsListExample {
 
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-/*
+/**
  *-> Java ArrayList implements list.
  *-> Java ArrayList class can contain duplicate elements.
  *-> Java ArrayList class maintains insertion order. 
