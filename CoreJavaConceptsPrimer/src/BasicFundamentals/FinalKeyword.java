@@ -3,8 +3,10 @@ package BasicFundamentals;
 public class FinalKeyword {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-			
+		final int MAX_AGE = 30;
+        // MAX_AGE = 35; // Error! Cannot change a final variable
+        System.out.println("The final variable MAX_AGE: " + MAX_AGE);
+		
 	}
 
 }
@@ -40,6 +42,21 @@ public class DerivedClass extends BaseClass {
     //     System.out.println("Attempting to override.");
     // }
 }
+
+Exampple2 ->
+class Animal {
+    public final void sound() {
+        System.out.println("Animals make sounds");
+    }
+}
+
+class Dog extends Animal {
+    // This will cause an error because we cannot override a final method
+    // public void sound() {
+    //    System.out.println("Dogs bark");
+    // }
+}
+
 ----------------------------------------
 Final Variables
 Variables declared as final cannot be reassigned once they are initialized. This is useful for creating 
@@ -55,6 +72,21 @@ public class MyClass {
         return maxValue;
     }
 }
+
+Example2 ->
+final class Bird {
+    public void fly() {
+        System.out.println("Birds can fly");
+    }
+}
+
+// This will cause an error because we cannot inherit from a final class
+// class Sparrow extends Bird {
+//     public void fly() {
+//         System.out.println("Sparrow flies fast");
+//     }
+// }
+
 ------------------------------------------
 
  */
