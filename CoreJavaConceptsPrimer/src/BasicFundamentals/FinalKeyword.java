@@ -26,6 +26,20 @@ public final class ImmutableClass {
         return value;
     }
 }
+
+Example2 ->
+final class Bird {
+    public void fly() {
+        System.out.println("Birds can fly");
+    }
+}
+
+// This will cause an error because we cannot inherit from a final class
+// class Sparrow extends Bird {
+//     public void fly() {
+//         System.out.println("Sparrow flies fast");
+//     }
+// }
 ------------------------------
 Final Methods
 A method declared as final cannot be overridden by subclasses. This is useful for preventing alteration 
@@ -72,20 +86,6 @@ public class MyClass {
         return maxValue;
     }
 }
-
-Example2 ->
-final class Bird {
-    public void fly() {
-        System.out.println("Birds can fly");
-    }
-}
-
-// This will cause an error because we cannot inherit from a final class
-// class Sparrow extends Bird {
-//     public void fly() {
-//         System.out.println("Sparrow flies fast");
-//     }
-// }
 
 ------------------------------------------
 
