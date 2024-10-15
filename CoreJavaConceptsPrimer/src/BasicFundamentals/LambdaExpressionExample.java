@@ -1,3 +1,9 @@
+/**
+ * Arrays.sort()
+ * The Arrays.sort() method sorts the specified array into ascending numerical order. This method uses a 
+ * Dual-Pivot Quicksort algorithm, which is faster and more efficient for most data sets.
+ */
+
 package BasicFundamentals;
 
 import java.util.Arrays;
