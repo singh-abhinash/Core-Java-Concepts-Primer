@@ -31,3 +31,12 @@ public class ImplementingThreadusingExtendingThread {
         thread2.start();
     }
 }
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/**
+* Summary:
+* -> Runnable: You pass an object implementing Runnable to Thread because Runnable only defines the task, and 
+* Thread manages the thread creation and execution.
+* 
+* -> Thread: When extending Thread, your subclass already has all thread management capabilities, so you create an 
+* instance of your subclass and call start() directly without needing an external object.
+*/
