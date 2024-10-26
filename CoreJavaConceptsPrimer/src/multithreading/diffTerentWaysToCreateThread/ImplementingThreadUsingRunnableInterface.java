@@ -71,6 +71,7 @@ public class Main {
  * public class Main {
     public static void main(String[] args) {
         // Using a lambda expression to create a Runnable
+        //below "() ->" is nothing but calling run() method
         Thread thread = new Thread(() -> System.out.println("Running in a thread"));
         
         thread.start(); // Start the thread
