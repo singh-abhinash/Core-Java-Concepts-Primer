@@ -49,7 +49,7 @@ public class MonitorLockExample {
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
- * Thread generally put monitor lock on object when it goes inside synchronized method.
+ * ******Thread generally put monitor lock on "object" when it goes inside synchronized method.*********
  * 
  * Explanation:
  * 

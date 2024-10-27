@@ -38,4 +38,5 @@ public class DaemonThreadExample {
 * -> daemonThread is a daemon thread (set with .setDaemon(true)).
 * -> The main thread completes after 2 seconds, causing the daemon thread to stop automatically.
 * -> The daemon thread runs a background task but stops immediately when the main thread finishes.
+* -> AUTO SAVE AND GARBAGE COLLECTOR IS AN EXAMPLE OF DAEMON THREAD
 */
