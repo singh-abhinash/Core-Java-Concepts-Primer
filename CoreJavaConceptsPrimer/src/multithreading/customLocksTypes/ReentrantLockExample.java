@@ -5,9 +5,8 @@ import java.util.concurrent.locks.ReentrantLock;
 class SharedResource {
 	
 	boolean isAvailable = false;
-	ReentrantLock reentrantLock = new ReentrantLock();
 	
-	public void producer() {
+	public void producer(ReentrantLock reentrantLock) {
 		
 		try {
 			
@@ -32,13 +31,14 @@ class SharedResource {
 public class ReentrantLockExample {
     public static void main(String[] args) {
     	SharedResource resource = new SharedResource();
+    	ReentrantLock reentrantLock = new ReentrantLock();
     	
     	Thread t1 = new Thread(() -> {
-    		resource.producer();
+    		resource.producer(reentrantLock);
     	});
     	
     	Thread t2 = new Thread(() -> {
-    		resource.producer();
+    		resource.producer(reentrantLock);
     	});
     	
     	t1.start();
@@ -47,5 +47,5 @@ public class ReentrantLockExample {
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
- * Here we can see without synchronized method, it is working fine. 
+ * Here we can see without synchronized method, it is working fine using custom reentrant lock. 
  */
