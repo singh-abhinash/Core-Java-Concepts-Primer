@@ -68,4 +68,8 @@ public class StampedOptimisticLockExample {
  * in tryOptmistic.read() there is nothing like lock and unlock. we use lock.validate(stamp) to check.
  * since we are using same lock for consumer and producer, so we can easily see the interruption using consumer write 
  * lock operation
+ * 
+ * Optimistic concurrency control is also lock free protcol.
+ * Optimistic concurrency control work with db.
+ * that stamp is type of version, so whenever stamp update it means version is updating.
  */
