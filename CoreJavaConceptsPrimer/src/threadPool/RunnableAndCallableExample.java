@@ -80,6 +80,7 @@ public class RunnableAndCallableExample {
  * 
  * -> FutureTask<?>: Here, FutureTask<?> is used to wrap the Runnable task, indicating that no specific result type is 
  * expected (<?> represents any type(String, Integer....) or none).
+ * ? mark is called wild card.
  * -> New FutureTask<>(Runnable, null): The second parameter is null because there's no meaningful result expected from 
  * this Runnable task.
  * -> Using futureTask.get(): Although the Runnable doesn’t produce a result, get() will still block until the task 

@@ -70,6 +70,8 @@ public class FutureInterfaceExample {
  * 
  * -> Whenever we will do poolExecutor.submit() then it always return future object
  * Future<?> futureObj = poolExecutor.submit();
+ * -?.submit() is a asynchronous operation.
+ * -> ? mark is called wild card
  * -> Using this future object we can know the status of thread.
  * 
  * -> Suppose thread1 and thread2 is calling from main() which is caller thread, now what if caller wants to know the 
