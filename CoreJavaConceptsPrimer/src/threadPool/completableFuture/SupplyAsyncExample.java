@@ -8,13 +8,20 @@ public class SupplyAsyncExample {
         CompletableFuture<Integer> supplyTask = CompletableFuture.supplyAsync(() -> {
             System.out.println("SupplyAsync: Initial task on thread: " + Thread.currentThread().getName());
             return 20; // Returns an integer value
+        }).exceptionally(ex -> {
+            System.err.println("Exception occurred: " + ex.getMessage());
+            return -1; // Fallback value in case of exception
         });
 
-        // Block the main thread until task completes
-        supplyTask.join(); // This will ensure the main thread waits for the task to finish
-        System.out.println("thread task is completed then main thread executed");
+        // Block the main thread until the task completes
+        int result = supplyTask.join(); // This will ensure the main thread waits for the task to finish
+        System.out.println("Result from SupplyAsync: " + result); // Print the result from the asynchronous task
+
+        // Indicate that the main thread has completed execution after the task
+        System.out.println("Thread task is completed; now the main thread will execute.");
     }
 }
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
@@ -30,6 +37,8 @@ public class SupplyAsyncExample {
  * task will run in a separate thread, managed by the Java thread pool.
  * -> Inside the lambda expression, it prints the current thread name using Thread.currentThread().getName() and 
  * returns the integer value 20.
+ * -> the task inside supplyAsync() runs asynchronously, and the result (20) is stored in the CompletableFuture 
+ * object, future.
  * 
  * Blocking the Main Thread:
  * supplyTask.join();
