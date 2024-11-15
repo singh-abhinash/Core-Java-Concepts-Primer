@@ -19,6 +19,7 @@ class Persons {
 	private Address address;
 	
 	public Persons(String name, int age, Address address) {
+		//this keyword is a reference to the current object within an instance method or constructor.
 		this.name = name;
 		this.age = age;
 		this.address = address;
