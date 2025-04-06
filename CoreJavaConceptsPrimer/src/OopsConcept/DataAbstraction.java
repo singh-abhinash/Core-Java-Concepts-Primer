@@ -99,6 +99,8 @@ public class DataAbstraction {
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /*
  * 
+ * Class - class is a blue print of object 
+ * Object - It is instance of class
 Abstract Classes:
 Use the abstract keyword to declare a class as abstract.
 Can have both abstract methods (without body) and concrete methods (with body).

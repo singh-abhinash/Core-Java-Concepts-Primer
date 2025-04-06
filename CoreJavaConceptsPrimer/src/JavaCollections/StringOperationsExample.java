@@ -19,7 +19,7 @@ public class StringOperationsExample {
 
         // 5. Compare Strings
         System.out.println("str1 equals str2? " + str1.equals(str2));
-        System.out.println("str1 equalsIgnoreCase 'hello'? " + str1.equalsIgnoreCase("hello"));
+        System.out.println("str1 equalsIgnoreCase 'hello'? " + str1.equalsIgnoreCase("HELLO"));
 
         // 6. Check if String is Empty
         System.out.println("Is str1 empty? " + str1.isEmpty());
@@ -45,6 +45,9 @@ public class StringOperationsExample {
 
         // 11. Trim Whitespaces
         System.out.println("Trimmed str3: '" + str3.trim() + "'");
+        
+        String sub = str2.substring(1, 4); // Extract substring from index 1 to 3 (4 is exclusive)
+        System.out.println("Substring from 1 to 3: " + sub); // Output: "orl"
 
         // 12. Check if String Contains Substring
         System.out.println("Does concatenated contain 'World'? " + concatenated.contains("World"));

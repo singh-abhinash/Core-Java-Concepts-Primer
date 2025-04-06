@@ -49,7 +49,7 @@ public class AllTerminalOperations {
 		reduceValue1.ifPresent(result -> System.out.println("Sum: " + result));
 		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 		
-		//for min() it is working as a first()
+		//for min() it is working as a first(
 		Optional<Integer> minValue = num.stream()
 				.min((val1, val2) -> (val1 - val2));
 		System.out.println("minimum value is -> " + minValue.get());

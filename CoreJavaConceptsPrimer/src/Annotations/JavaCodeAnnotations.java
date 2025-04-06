@@ -82,11 +82,11 @@ class CheckSafevarargs {
 		//Once we will put @SafeVarargs annotation we are not able to see any warnings. So make sure we should use this
 		//annotation when we are confimed that it will not throw any error during runtime.
 		@SafeVarargs
-	 	public static void printAllIntegerElements(List<Integer>...lists) {
-	 		Object[] integerValueList = lists;
-	 		List<String> newStringList = Arrays.asList("Ram","Shyam","ghanshyam");
-	 		integerValueList[0] = newStringList;
-	 	}
+		public static void printAllIntegerElements(List<Integer>... lists) { 
+		    Object[] integerValueList = lists; // (1) Assigns varargs to Object array (unsafe)
+		    List<String> newStringList = Arrays.asList("Ram", "Shyam", "Ghanshyam");
+		    integerValueList[0] = newStringList; // (2) Assigns List<String> to List<Integer> (Heap Pollution!)
+		}
 		
 		/*
 		 *BELOW STATEMENT WILL THROW ERROR BECAUSE WE ARE USING List<T> WHICH WILL TAKE SAME TYPE OF LIST
@@ -99,6 +99,19 @@ class CheckSafevarargs {
 				}
 			}
 	 	}
+	 	
+	 	lists is a varargs parameter of type List<Integer>...
+
+Java treats varargs as an array of generic types (List<Integer>[]).
+Generic arrays are not type-safe because of type erasure.
+lists is actually of type List[] (raw type at runtime).
+Object[] integerValueList = lists;
+
+lists is treated as an Object[], bypassing generic type safety.
+integerValueList[0] = newStringList;
+
+Assigning List<String> to integerValueList[0] corrupts the expected List<Integer>[] structure.
+This is heap pollution, as an array meant for List<Integer> now contains List<String>, violating type safety.
 		*/
 		
 		

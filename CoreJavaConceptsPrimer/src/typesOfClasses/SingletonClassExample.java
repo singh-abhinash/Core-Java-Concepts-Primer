@@ -159,6 +159,8 @@ public class SingletonClassExample {
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 /**
+ * A Singleton Class is a class that allows only one instance (object) to be created during the entire execution of a 
+ * program.
  * Explanation of Each Approach:
  * 
  * Eager Initialization: The singleton instance is created at the time of class loading. Simple but can lead to resource 

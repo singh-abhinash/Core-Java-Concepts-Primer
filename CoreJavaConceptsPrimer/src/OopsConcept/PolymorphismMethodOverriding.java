@@ -63,4 +63,15 @@ public class PolymorphismMethodOverriding {
  * The compiler uses the reference type to determine what methods can be called on the object. 
  * The actual method implementation that gets executed is determined at runtime based on the 
  * object type.
+ * 
+ * Key Differences
+Aspect							Method Overloading							Method Overriding
+Class							Same class									Subclass and superclass
+Parameters						Different									Same
+Return Type						Can differ									Must be the same or covariant
+Access Modifier					No restrictions								Cannot be more restrictive
+Binding							Compile-time (static)						Runtime (dynamic)
+Annotations						Not required								Uses @Override for clarity
+Polymorphism					Static polymorphism							Dynamic polymorphism
+
  */

@@ -73,7 +73,9 @@ May perform better than synchronized in some high-contention scenarios.
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
-A deadlock is a situation in multithreading or multiprocessing where two or more threads (or processes) are unable to proceed because each is waiting for the other to release a resource. This leads to a cycle of dependency, and no thread can make progress, effectively halting execution.
+A deadlock is a situation in multithreading or multiprocessing where two or more threads (or processes) are unable to 
+proceed because each is waiting for the other to release a resource. This leads to a cycle of dependency, and no thread 
+can make progress, effectively halting execution.
 
 Deadlock Example:
 Consider two threads (Thread-1 and Thread-2) and two resources (Resource-1 and Resource-2):

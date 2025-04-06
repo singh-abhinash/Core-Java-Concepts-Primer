@@ -14,7 +14,7 @@ import java.lang.annotation.Repeatable;
  *@Target(ElementType.ANNOTATION_TYPE)
 public @interface Target {
  *If you will click on target annotation then you will see we can apply @target annotation on 
- *ElementType.Annotation_Type it means we can use meta annotation on top of annotation onlu- keep remember
+ *ElementType.Annotation_Type it means we can use meta annotation on top of annotation only8- keep remember
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

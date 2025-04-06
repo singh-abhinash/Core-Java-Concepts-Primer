@@ -47,7 +47,7 @@ public class IsARelationship {
 }
 
 /*
- * Is-a Relationship
+ * Is-a Relationship (IS-A relationship is not association)
 The "is-a" relationship represents inheritance or implementation and is a way to establish a 
 parent-child relationship between classes. It is characterized by the extends keyword for 
 classes and the implements keyword for interfaces. It implies that the child class (subclass) 

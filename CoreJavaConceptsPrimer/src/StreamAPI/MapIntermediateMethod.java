@@ -52,6 +52,6 @@ stream of the transformed elements.
 
 Key Points about map():
 => Transformation: map() is primarily used for transforming the elements in a stream into another type or form.
-=> Non-terminal Operation: The map() method is an intermediate operation, which means it doesn’t execute until a terminal operation like collect() or forEach() is called.
-=> Non-destructive: It doesn’t modify the original data but instead returns a new stream with transformed elements.
+=> Non-terminal Operation: The map() method is an intermediate operation, which means it doesnï¿½t execute until a terminal operation like collect() or forEach() is called.
+=> Non-destructive: It doesnï¿½t modify the original data but instead returns a new stream with transformed elements.
  */

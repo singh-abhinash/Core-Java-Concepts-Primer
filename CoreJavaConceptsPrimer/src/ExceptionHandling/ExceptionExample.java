@@ -142,7 +142,7 @@ public class ExceptionExample {
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 //#######################################################################################################
 
-//-> CHECKED/COMPILE TIME EXCEPTION:
+//-> CHECKED/COMPILE TIME EXCEPTION: CLASS NOT FOUND EXCEPTION, SYNTAX ERROR
 
 	//************IMPORTANT******************
 /**

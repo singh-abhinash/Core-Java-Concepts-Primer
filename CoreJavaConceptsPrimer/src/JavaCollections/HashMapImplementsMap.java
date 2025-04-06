@@ -56,6 +56,21 @@ public class HashMapImplementsMap {
         // 12. Clear all entries
         map.clear();
         System.out.println("After clearing the map: " + map);
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        int[] numbers = {1, 2, 2, 3, 4, 5, 1, 3, 2, 4, 5, 5};
+
+        // Create a HashMap to store the count of each number
+        HashMap<Integer, Integer> countMap = new HashMap<>();
+
+        // Loop through the array to count occurrences
+        for (int num : numbers) {
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+        }
+
+        // Print the occurrences
+        for (Integer key : countMap.keySet()) {
+            System.out.println("Number " + key + " occurs " + countMap.get(key) + " times.");
+        }
 	}
 
 }

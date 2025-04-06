@@ -10,18 +10,18 @@ public class ArrayListImplementsListExample {
 		// TODO Auto-generated method stub
 		
 		// Creating an ArrayList
-        ArrayList<String> fruits = new ArrayList<>();
-
+        ArrayList<String> fruits = new ArrayList<String>();
+        //ArrayList<String> fruits = new ArrayList<>(); -> both are same.
         // Adding elements
         System.out.println("******Added elements using .add() method******");
         fruits.add("Apple");
         fruits.add("Banana");
         fruits.add("Orange");
         
-        //using lambda expression
+        //using lambda expressio
         System.out.println("******printing elements using .forEach() method, using lambda expression******");
         fruits.forEach(fruit -> {
-        	System.out.print(fruit + " ");
+        	System.out.print(fruit + " "); 
         });
         
         System.out.println();

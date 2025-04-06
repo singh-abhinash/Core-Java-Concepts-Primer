@@ -129,6 +129,7 @@ Definition:
 Encapsulation is one of the fundamental principles of object-oriented programming (OOP). 
 It involves bundling the data (variables) and the methods (functions) that operate on the 
 data into a single unit, or class.
+Binding data and methods into single unit.
 It restricts direct access to some of an object's components, which means that the 
 internal representation of an object is hidden from the outside.
 

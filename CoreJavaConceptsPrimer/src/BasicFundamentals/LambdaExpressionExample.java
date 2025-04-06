@@ -79,7 +79,9 @@ public class LambdaExpressionExample {
 		
 		/**
 		 * man.sort((p1, p2) -> String.compare(p1.getName(), p2.getName()));
-		 * Above statement is wrong because reason man.sort((p1, p2) -> String.compare(p1.getName(), p2.getName())); is incorrect is because String is a class, and there is no method compare() that is directly callable on the String class in this way.
+		 * Above statement is wrong because reason man.sort((p1, p2) -> String.compare(p1.getName(), p2.getName())); is 
+		 * incorrect is because String is a class, and there is no method compare() that is directly callable on the String 
+		 * class in this way.
 		 */
 		
 		man.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));
