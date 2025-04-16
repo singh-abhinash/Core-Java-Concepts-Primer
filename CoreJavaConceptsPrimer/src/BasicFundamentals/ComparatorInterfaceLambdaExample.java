@@ -51,6 +51,12 @@ public class ComparatorInterfaceLambdaExample {
                 new PersonClassLambdaExample("Bob", 25, 75.0),
                 new PersonClassLambdaExample("Charlie", 35, 80.0)
         );
+		/*
+		 * List<PersonClassLambdaExample> people = new ArrayList<>();
+people.add(new PersonClassLambdaExample("Alice", 30, 65.5));
+people.add(new PersonClassLambdaExample("Bob", 25, 75.0));
+people.add(new PersonClassLambdaExample("Charlie", 35, 80.0));
+		 */
         System.out.println("Original people list: " + people);
 
         people.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));

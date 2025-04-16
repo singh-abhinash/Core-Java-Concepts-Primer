@@ -10,6 +10,7 @@ public class ArraysExample {
 
         // Initializing an array
         int[] initializedNumbers = {5, 2, 8, 1, 3};
+        //int[] initializedNumbers = new int[] {5, 2, 8, 1, 3};
 
         // Accessing elements
         System.out.println("Element at index 2: " + initializedNumbers[2]);

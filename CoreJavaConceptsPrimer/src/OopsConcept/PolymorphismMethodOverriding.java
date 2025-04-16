@@ -64,6 +64,8 @@ public class PolymorphismMethodOverriding {
  * The actual method implementation that gets executed is determined at runtime based on the 
  * object type.
  * 
+ * Type checking happens at compile time and mapping of method happens at run time.
+ * 
  * Key Differences
 Aspect							Method Overloading							Method Overriding
 Class							Same class									Subclass and superclass

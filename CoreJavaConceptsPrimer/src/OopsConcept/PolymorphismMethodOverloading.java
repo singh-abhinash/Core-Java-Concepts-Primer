@@ -2,15 +2,15 @@ package OopsConcept;
 
 class Sum {
 	
-	public int sum(int a, int b) {
+	public int add(int a, int b) {
 		return a + b;
 	}
 	
-	public int sum(int a, int b, int c) {
+	public int add(int a, int b, int c) {
 		return a + b + c;
 	}
 	
-	public String sum(String a, String b) {
+	public String add(String a, String b) {
 		return a + b;
 	}
 }
@@ -22,9 +22,9 @@ public class PolymorphismMethodOverloading {
 		//Sum sum = new Sum(2, 3); -> this will throw error because we haven't defined constructor
 		//for this we have to create object and then pass
 		Sum obj = new Sum();
-		System.out.println("Sum is -> " + obj.sum(2, 3));
-		System.out.println("Sum is -> " + obj.sum(2, 3, 5));
-		System.out.println("Sum is -> " + obj.sum("Abhinash", "Singh"));
+		System.out.println("Sum is -> " + obj.add(2, 3));
+		System.out.println("Sum is -> " + obj.add(2, 3, 5));
+		System.out.println("Sum is -> " + obj.add("Abhinash", "Singh"));
 	}
 
 }

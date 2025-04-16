@@ -56,6 +56,12 @@ public class ComparableInterfaceExample {
                 new PersonComparableExample("Bob", 25, 75.0),
                 new PersonComparableExample("Charlie", 35, 80.0)
         );
+		/*
+		 * List<PersonComparableExample> people = new ArrayList<>();
+		   people.add(new PersonComparableExample("Alice", 30, 65.5));
+		   people.add(new PersonComparableExample("Bob", 25, 75.0));
+           people.add(new PersonComparableExample("Charlie", 35, 80.0));
+		 */
         System.out.println("Original people list: " + people);
 
         Collections.sort(people);
