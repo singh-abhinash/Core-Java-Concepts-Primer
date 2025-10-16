@@ -24,8 +24,8 @@ class MyRunnable implements Runnable {
 public class ImplementingThreadUsingRunnableInterface {
     public static void main(String[] args) {
         // Creating Runnable objects
-        Runnable runnableObj1 = new MyRunnable("Runnable Thread 1");
-        Runnable runnableObj2 = new MyRunnable("Runnable Thread 2");
+    	MyRunnable runnableObj1 = new MyRunnable("Runnable Thread 1");
+    	MyRunnable runnableObj2 = new MyRunnable("Runnable Thread 2");
 
         // Wrapping Runnable objects in Thread objects and starting them
         Thread thread1 = new Thread(runnableObj1);

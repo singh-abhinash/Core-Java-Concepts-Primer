@@ -121,13 +121,13 @@ can write methods that operate on Parent type references, and those methods can 
 any subclass of Parent.
 
 EXAMPLE ->
-Parent obj = new Child();
+Parent refVar = new Child();
 
 Let's break down this statement:
 
--> Parent obj: This declares a reference variable named obj of type Parent.
+-> Parent refVar: This declares a reference variable named obj of type Parent.
 -> new Child(): This creates a new object of type Child.
--> =: This assigns the newly created Child object to the Parent reference variable obj.
+-> =: This assigns the newly created Child object to the Parent reference variable refVar.
 -> The reference type is Parent and The object type is Child.
 
 What Happens Internally : 
@@ -142,4 +142,52 @@ ancestors).
 	-> The methods that are executed when obj calls a method are determined by the type of 
 	the actual object, not the reference type. This means that if the method show() is 
 	overridden in Child, the overridden version in Child will be executed.
+	
+	class Parent {
+    void show() {
+        System.out.println("Parent show()");
+    }
+
+    void display() {
+        System.out.println("Parent display()");
+    }
+}
+
+class Child extends Parent {
+    @Override
+    void show() {
+        System.out.println("Child show()");
+    }
+
+    void onlyInChild() {
+        System.out.println("Child specific method");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Parent obj = new Child(); // Reference type: Parent, Object type: Child
+
+        obj.show();     // ✅ Allowed → Method exists in Parent
+                        // Executes Child's show() → "Child show()"
+
+        obj.display();  // ✅ Allowed → Method exists in Parent
+                        // Executes Parent's display() → "Parent display()"
+
+        // obj.onlyInChild(); ❌ Not allowed → Reference is Parent type,
+        // and Parent doesn’t define this method
+    }
+}
+
+
+Child show()
+Parent display()
+
+🔍 Explanation:
+Aspect	Detail
+Reference Type (Parent)	Compiler only allows calling methods defined in Parent
+Actual Object Type (Child)	JVM decides which version (Parent or Child) to execute at runtime
+obj.show()	Defined in Parent but overridden in Child → Child’s version runs
+obj.display()	Not overridden → Parent’s version runs
+obj.onlyInChild()	Compile-time error → not defined in Parent
  */

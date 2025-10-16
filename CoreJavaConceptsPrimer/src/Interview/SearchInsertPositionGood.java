@@ -7,7 +7,7 @@ public class SearchInsertPositionGood {
 
         int target1 = -1;
         int target2 = 5;
-        int target3 = 8;
+        int target3 = 10;
 
         System.out.println("Insert position of " + target1 + " is: " + searchInsert(nums, target1));  // Output: 2
         System.out.println("Insert position of " + target2 + " is: " + searchInsert(nums, target2));  // Output: 1

@@ -10,6 +10,7 @@ public class HashMapImplementsMap {
 		// 1. Initialization
         // Map<String, Integer> map = new HashMap<>();
 		HashMap<String, Integer> map = new HashMap<>();
+		//also correct - HashMap<String, Integer> map = new HashMap<String, Integer>();
 
         // 2. Add key-value pairs
         map.put("Alice", 25);
@@ -71,6 +72,47 @@ public class HashMapImplementsMap {
         for (Integer key : countMap.keySet()) {
             System.out.println("Number " + key + " occurs " + countMap.get(key) + " times.");
         }
+        
+        System.out.println("+++++++++++++++++ putIfAbsent +++++++++++++++++++");
+
+        Map<String, String> capitalMap = new HashMap<>();
+        capitalMap.put("India", "Delhi");
+        capitalMap.putIfAbsent("USA", "Washington D.C.");
+        capitalMap.putIfAbsent("India", "New Delhi"); // won't update
+
+        System.out.println(capitalMap);
+
+        System.out.println("+++++++++++++++++ computeIfAbsent +++++++++++++++++++");
+
+        Map<String, StringBuilder> memoMap = new HashMap<>();
+        memoMap.computeIfAbsent("ChatGPT", k -> new StringBuilder()).append(" is smart!");
+        memoMap.computeIfAbsent("Java", k -> new StringBuilder()).append(" is powerful!");
+
+        System.out.println(memoMap);
+
+        System.out.println("+++++++++++++++++ computeIfPresent +++++++++++++++++++");
+
+        Map<String, Integer> voteMap = new HashMap<>();
+        voteMap.put("Alice", 1);
+        voteMap.put("Bob", 2);
+
+        voteMap.computeIfPresent("Alice", (k, v) -> v + 1);
+        voteMap.computeIfPresent("Charlie", (k, v) -> v + 1); // not present, does nothing
+
+        System.out.println(voteMap);
+        
+        System.out.println("+++++++++++++++++ getOrDefault +++++++++++++++++++");
+
+        Map<String, String> countryCapital = new HashMap<>();
+        countryCapital.put("India", "Delhi");
+        countryCapital.put("USA", "Washington D.C.");
+
+        // Using getOrDefault
+        String capital1 = countryCapital.getOrDefault("India", "Not Found");
+        String capital2 = countryCapital.getOrDefault("UK", "Not Found");
+
+        System.out.println("Capital of India: " + capital1);  // Delhi
+        System.out.println("Capital of UK: " + capital2);     // Not Found
 	}
 
 }

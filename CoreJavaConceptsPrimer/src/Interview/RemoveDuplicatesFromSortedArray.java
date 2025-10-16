@@ -1,16 +1,20 @@
 package Interview;
 
+import java.util.Arrays;
+
 public class RemoveDuplicatesFromSortedArray {
 
 	public static void main(String[] args) {
         int[] nums1 = {1, 1, 2};
         int k1 = removeDuplicates(nums1);
         System.out.println("Length: " + k1); // Output: 2
+        //System.out.println(Arrays.toString(nums1)); - think about it
         printArray(nums1, k1); // Output: 1 2
 
         int[] nums2 = {0,0,1,1,1,2,2,3,3,4};
         int k2 = removeDuplicates(nums2);
         System.out.println("Length: " + k2); // Output: 5
+        //System.out.println(Arrays.toString(nums2)); - think about it
         printArray(nums2, k2); // Output: 0 1 2 3 4
     }
 

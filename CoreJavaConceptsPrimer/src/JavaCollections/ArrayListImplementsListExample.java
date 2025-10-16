@@ -3,6 +3,7 @@ package JavaCollections;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class ArrayListImplementsListExample {
 
@@ -10,6 +11,7 @@ public class ArrayListImplementsListExample {
 		// TODO Auto-generated method stub
 		
 		// Creating an ArrayList
+        //List<String> fruits = new ArrayList<String>();
         ArrayList<String> fruits = new ArrayList<String>();
         //ArrayList<String> fruits = new ArrayList<>(); -> both are same.
         // Adding elements
@@ -18,7 +20,7 @@ public class ArrayListImplementsListExample {
         fruits.add("Banana");
         fruits.add("Orange");
         
-        //using lambda expressio
+        //using lambda expression
         System.out.println("******printing elements using .forEach() method, using lambda expression******");
         fruits.forEach(fruit -> {
         	System.out.print(fruit + " "); 

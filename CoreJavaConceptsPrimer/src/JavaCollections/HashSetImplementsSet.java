@@ -10,6 +10,7 @@ public class HashSetImplementsSet {
 		// 1. Initialization
         HashSet<String> set = new HashSet<>();
         //Set<String> set1 = new HashSet<>();
+        //HashSet<String> set1 = {"a", "b"}; - this is wrong
 
         // 2. Add elements
         set.add("Alice");
